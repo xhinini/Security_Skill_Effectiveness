@@ -1,0 +1,23 @@
+{
+  "big-closed": {
+    "model": "claude-sonnet-5",
+    "provider": "subscription",
+    "requested_effort": "high"
+  },
+  "small-closed": {
+    "model": "claude-haiku-4-5",
+    "provider": "subscription",
+    "requested_effort": null
+  },
+  "big-open": {
+    "model": "deepseek/deepseek-v4-pro-0813",
+    "provider": "openrouter",
+    "requested_effort": "high",
+    "historical_official_model": "deepseek-v4-pro"
+  },
+  "small-open": {
+    "model": "deepseek/deepseek-v3.2",
+    "provider": "openrouter",
+    "requested_effort": "high"
+  }
+}

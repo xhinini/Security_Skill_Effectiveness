@@ -17,7 +17,8 @@ Replication package for evaluating and refining security-review skills on Linux 
 |---|---|
 | `replication-core.zip` | Datasets, runner, prompts, skills, configuration, indexes and reports |
 | `case-evidence.zip` | Target-file snapshots and fixing patches |
-| `training-{group}.zip` | Training records for each model group |
+| `training-{group}.zip` | Training records for each model group, except `training-big-open` |
+| `training-big-open.part00`–`part02` | Parts of the large open-model training archive; reassemble with `cat training-big-open.part* > training-big-open.zip` |
 | `refinement.zip` | Refinement rounds, skill snapshots, patches and metrics |
 | `testing.zip` | Original and refined skill test records |
 | `core/` | Extracted replication files |

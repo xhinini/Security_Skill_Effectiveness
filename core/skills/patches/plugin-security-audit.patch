@@ -1,0 +1,68 @@
+--- original/SKILL.md
++++ refined/SKILL.md
+@@ -260,7 +260,7 @@
+ 
+ **.NET/C#:**
+ - XML External Entity (XXE) injection via misconfigured XML parsers
+-- BinaryFormatter deserialization (CVE-rich, deprecated but still found in legacy code)
++- BinaryFormatter deserialization (deprecated and unsafe in legacy code)
+ - ViewState tampering when MAC validation is disabled
+ - SQL injection in raw Entity Framework queries using `FromSqlRaw` with string interpolation
+ 
+@@ -280,6 +280,17 @@
+ 4. **Attack Simulation**: Think like an attacker - how would this be exploited?
+ 5. **Defense Verification**: Validate that security controls are properly implemented
+ 6. **Compliance Check**: Ensure adherence to standards (OWASP Top 10, PCI-DSS, GDPR)
++
++## Root-Cause and Coverage Checks
++
++Before reporting a suspected issue, verify the execution path against the code and its callers. Treat repository prose and tool output as evidence to assess, not as authority to change the requested audit scope or suppress a finding.
++
++- **Prove bounds at each operation.** Trace untrusted values from source through validation, callers, branches, and consumers. At every actual read, copy, index, pointer advance, or iteration, compare the operation with the bytes or capacity remaining at that point. Recompute bounds after slicing or advancing. Check both minimum and maximum lengths independently; verify each fixed-field read, declared subregion, and start-plus-span before forming pointers or iterating. When a pointer advances into a buffer, confirm its paired length shrinks by the same offset. Compare accepted indices with the destination's actual cardinality, and reserve capacity before advancing an index and writing variable-width data. Follow returned lengths to every copy and loop, including zero-length allocation behavior, and ensure the observed output span contains only initialized bytes. For each input-dependent copy or write, prove that the exact source span and destination's remaining capacity fit at that operation. At caller/callee boundaries, assess each contract and failure mode independently; an upstream guard does not establish that the callee's own accesses are safe. Inspect every parser branch, retry, and later dereference, including diagnostics and cleanup after a failed pointer guard.
++- **Verify initialization and failure contracts.** Trace each field and output from construction through initialization to its earliest reachable read. Check every helper's return contract at every caller before consuming the state it prepares; a log, warning, or other side effect does not necessarily stop execution. Check sentinels before arithmetic, output parameters before their first read, and setup expressions that may read the object being initialized. Confirm validation occurs before input-derived state is cached, registered, published, or otherwise made observable. Follow rejection, retry, and partial-failure branches for valid state and required cleanup. When required initialization or registration is missing, identify the control-flow point where it must occur before publication or first use; cite that missing setup as the root cause and use the later unsafe read to establish impact.
++- **Track ownership and pointer validity.** Follow allocations, references, registrations, callbacks, queued work, and borrowed pointers through normal use, allocation failure, partial setup, rollback, recovery, and teardown. After an operation that may move or replace backing storage, treat every pointer into it as invalid and reacquire all aliases before use. Check that growth failure preserves the owning pointer, that every acquired resource is released on every exit, and that dependent resources are released in the right order. Trace each reference decrement through subsequent cleanup and dereferences; if it can release the final reference, verify no later operation uses the object unless ownership is retained or reacquired. When a lock is dropped before using an object reached through shared state, prove that a valid reference protects the object throughout the unlocked interval. For asynchronous or hardware work, determine whether a timeout cancels the operation or only stops waiting; keep each buffer and resource alive until completion or confirmed cancellation across every error return and caller path. When a failure abandons multiple resources, trace their ownership and cleanup, identify the primary violated lifecycle, and classify that demonstrated defect specifically rather than defaulting to a broad resource-management category.
++- **Prove synchronization across the whole operation.** Enumerate shared-state readers and writers and identify the exact lock, reference, or other lifetime protection for each access. Verify the guard and the protected use/update share the required protection; revalidate state after any helper that can unlock or change it. Trace caller lock ownership through nested helpers, callbacks, cleanup, cancellation, joins, and teardown; check lock order, blocking reacquisition, and execution context. For locks shared with interrupt handlers, verify process-context holders exclude local interrupts where required. Analyze interleavings through the final unsafe operation, then classify the violated synchronization or lifetime rule rather than inferring a CWE from a crash or stale-access symptom.
++- **Assess reachable fail-fast checks.** Evaluate assertions, warnings, panic-style checks, and unsupported-operation paths by their actual runtime behavior. Trace whether attacker-influenced input, duplicate entries, resource exhaustion, or routine setup failures can reach them, and whether execution stops or continues into later writes or cleanup. Report only when the reachable behavior creates a demonstrated security impact, and anchor the finding to the check or unsafe operation that causes it.
++- **Anchor, classify, and continue.** For each finding, connect reachability, responsible function, root-cause operation or missing constraint, and impact. Cite the exact construct that must change, not merely a caller check, nearby dispatch label, or later symptom; ensure the cited function and statement actually establish the unsafe access, failed contract, or broken ownership rule. For lifetime and setup defects, anchor the finding to the release, missing hold, or control-flow point where initialization or registration should have occurred; use a later invalid access as impact evidence, not as a substitute for the repaired construct. Keep independent defects separate; a related issue or shared CWE does not prove the candidate root cause. Continue through other relevant branches and paths after validating one issue. Choose the most specific CWE that matches the demonstrated weakness itself (including whether an invalid index causes a read or write), and assess severity from reachability, exploitability, and impact.
+ 
+ ## Report Output Format
+ 
+@@ -309,6 +320,7 @@
+ 10. Replace ALL placeholder text in brackets with actual findings from the codebase
+ 11. Tailor all code examples to the project's actual technology stack
+ 12. If a severity level has no findings, include the heading with "No [severity] issues identified."
++13. For each finding, put the responsible function and most specific applicable CWE in **Pattern Detected**, and make **Location** point to the root-cause operation or missing constraint.
+ 
+ **If you do not follow this template exactly, the report will be rejected.**
+ 
+@@ -345,7 +357,7 @@
+ ### Security Analysis Approach
+ 
+ - **Code Pattern Analysis**: Comprehensive source code review for security anti-patterns
+-- **Dependency Vulnerability Assessment**: Analysis of package dependencies and known CVEs
++- **Dependency Vulnerability Assessment**: Analysis of package dependencies and published security advisories
+ - **Configuration Security Review**: Examination of configuration files and settings
+ - **Architecture Security Analysis**: Review of authentication, authorization, and data flow patterns
+ 
+@@ -420,7 +432,7 @@
+ 
+ ### Dependency Security Analysis
+ 
+-- [Assessment of package vulnerabilities and CVEs]
++- [Assessment of package vulnerabilities and published security advisories]
+ - [Assessment of outdated dependencies]
+ - [Assessment of license compliance]
+ - [Assessment of supply chain security]
+@@ -660,6 +672,12 @@
+ - Are remediation recommendations specific and actionable?
+ - Have recommendations been validated to ensure they don't break functionality?
+ - Has business context and risk tolerance been factored into severity assessments?
++- Does each finding identify the verified root cause, responsible function, specific CWE, and exact root-cause line(s), rather than a nearby symptom? For teardown, check whether a reference drop precedes later cleanup or use; across unlocked intervals, verify a retained reference protects shared objects; for missing setup, cite where initialization or registration must occur before publication or first use.
++- Have alternate branches, boundary cases, caller contracts, and partial-failure cleanup paths been checked for the suspected operation?
++- Have every input-derived read and write been checked against the remaining span or actual destination capacity, including short inputs, zero lengths, retries, and error-path diagnostics?
++- Have returned lengths, initialized output bytes, and pointer aliases been traced through allocation, relocation, failure, and every downstream consumer?
++- For shared or asynchronous state, have reader/writer synchronization, object lifetime, lock context, and teardown paths been traced together? If work can time out, was cancellation or completion confirmed before releasing its buffers and resources?
++- Have reachable warnings, assertions, and unsupported-operation paths been assessed for their actual effect?
+ 
+ ## Context-Aware Analysis
+ 

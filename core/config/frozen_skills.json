@@ -1,0 +1,42 @@
+[
+  {
+    "skill": "plugin-security-audit",
+    "selected_round": 6,
+    "sha256": "b5e8c16805358c775bed767253feeaf918930362f07f2cc987c72ebd414e996c",
+    "changed_files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "sickn33-differential-review",
+    "selected_round": 8,
+    "sha256": "9962f8b60c8750d114b129a0e91819cb9be1a9583c003ca3ba1dcec3cca031e7",
+    "changed_files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "abstract-state-analyzer",
+    "selected_round": 2,
+    "sha256": "2333d98cd8c083af92a01ea3ee7136f456c370192a91dc8469ceade103818b90",
+    "changed_files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "mcouthon-security-review",
+    "selected_round": 1,
+    "sha256": "b02044e371fbbd2d4d69f96adaf60ba4ef6728f1e56e4d46e52ed74736d8a238",
+    "changed_files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "anthropic-vuln-scan",
+    "selected_round": 1,
+    "sha256": "c103a314aae37c43c0850c1b958c6d25cdddd3271d0fcc24c457ec0638ab014a",
+    "changed_files": [
+      "SKILL.md"
+    ]
+  }
+]

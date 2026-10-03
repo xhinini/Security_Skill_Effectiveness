@@ -1,0 +1,201 @@
+split,case_id,cve_id,published_utc,source
+training,case_001,CVE-2026-53300,2026-06-26T20:17:23.200,NVD CVE API
+training,case_002,CVE-2026-53296,2026-06-26T20:17:22.557,NVD CVE API
+training,case_003,CVE-2026-53290,2026-06-26T20:17:21.870,NVD CVE API
+training,case_004,CVE-2026-53276,2026-06-25T09:16:45.807,NVD CVE API
+training,case_005,CVE-2026-53275,2026-06-25T09:16:45.687,NVD CVE API
+training,case_006,CVE-2026-53273,2026-06-25T09:16:45.447,NVD CVE API
+training,case_007,CVE-2026-53272,2026-06-25T09:16:45.353,NVD CVE API
+training,case_008,CVE-2026-53264,2026-06-25T09:16:44.400,NVD CVE API
+training,case_009,CVE-2026-53260,2026-06-25T09:16:43.993,NVD CVE API
+training,case_010,CVE-2026-53259,2026-06-25T09:16:43.893,NVD CVE API
+training,case_011,CVE-2026-53325,2026-06-29T06:16:33.167,NVD CVE API
+training,case_012,CVE-2026-53324,2026-06-26T20:17:25.750,NVD CVE API
+training,case_013,CVE-2026-53318,2026-06-26T20:17:25.137,NVD CVE API
+training,case_014,CVE-2026-53316,2026-06-26T20:17:24.937,NVD CVE API
+training,case_015,CVE-2026-53315,2026-06-26T20:17:24.840,NVD CVE API
+training,case_016,CVE-2026-53313,2026-06-26T20:17:24.613,NVD CVE API
+training,case_017,CVE-2026-53307,2026-06-26T20:17:24.010,NVD CVE API
+training,case_018,CVE-2026-53305,2026-06-26T20:17:23.767,NVD CVE API
+training,case_019,CVE-2026-53302,2026-06-26T20:17:23.413,NVD CVE API
+training,case_020,CVE-2026-53301,2026-06-26T20:17:23.313,NVD CVE API
+training,case_021,CVE-2026-53308,2026-06-26T20:17:24.110,NVD CVE API
+training,case_022,CVE-2026-53261,2026-06-25T09:16:44.100,NVD CVE API
+training,case_023,CVE-2026-53258,2026-06-25T09:16:43.800,NVD CVE API
+training,case_024,CVE-2026-53252,2026-06-25T09:16:43.137,NVD CVE API
+training,case_025,CVE-2026-53229,2026-06-25T09:16:40.793,NVD CVE API
+training,case_026,CVE-2026-53227,2026-06-25T09:16:40.520,NVD CVE API
+training,case_027,CVE-2026-53226,2026-06-25T09:16:40.420,NVD CVE API
+training,case_028,CVE-2026-53222,2026-06-25T09:16:39.980,NVD CVE API
+training,case_029,CVE-2026-53213,2026-06-25T09:16:38.930,NVD CVE API
+training,case_030,CVE-2026-53211,2026-06-25T09:16:38.697,NVD CVE API
+training,case_031,CVE-2026-53303,2026-06-26T20:17:23.527,NVD CVE API
+training,case_032,CVE-2026-53268,2026-06-25T09:16:44.883,NVD CVE API
+training,case_033,CVE-2026-53255,2026-06-25T09:16:43.480,NVD CVE API
+training,case_034,CVE-2026-53254,2026-06-25T09:16:43.373,NVD CVE API
+training,case_035,CVE-2026-53253,2026-06-25T09:16:43.253,NVD CVE API
+training,case_036,CVE-2026-53230,2026-06-25T09:16:40.907,NVD CVE API
+training,case_037,CVE-2026-53224,2026-06-25T09:16:40.200,NVD CVE API
+training,case_038,CVE-2026-53179,2026-06-25T09:16:35.287,NVD CVE API
+training,case_039,CVE-2026-53172,2026-06-25T09:16:34.550,NVD CVE API
+training,case_040,CVE-2026-53149,2026-06-25T09:16:32.257,NVD CVE API
+training,case_041,CVE-2026-53246,2026-06-25T09:16:42.567,NVD CVE API
+training,case_042,CVE-2026-53209,2026-06-25T09:16:38.490,NVD CVE API
+training,case_043,CVE-2026-53205,2026-06-25T09:16:38.053,NVD CVE API
+training,case_044,CVE-2026-53203,2026-06-25T09:16:37.873,NVD CVE API
+training,case_045,CVE-2026-53196,2026-06-25T09:16:37.107,NVD CVE API
+training,case_046,CVE-2026-53195,2026-06-25T09:16:36.983,NVD CVE API
+training,case_047,CVE-2026-53194,2026-06-25T09:16:36.850,NVD CVE API
+training,case_048,CVE-2026-53187,2026-06-25T09:16:36.143,NVD CVE API
+training,case_049,CVE-2026-53173,2026-06-25T09:16:34.643,NVD CVE API
+training,case_050,CVE-2026-53148,2026-06-25T09:16:32.140,NVD CVE API
+training,case_051,CVE-2026-53323,2026-06-26T20:17:25.653,NVD CVE API
+training,case_052,CVE-2026-53304,2026-06-26T20:17:23.637,NVD CVE API
+training,case_053,CVE-2026-53293,2026-06-26T20:17:22.190,NVD CVE API
+training,case_054,CVE-2026-53231,2026-06-25T09:16:41.017,NVD CVE API
+training,case_055,CVE-2026-53207,2026-06-25T09:16:38.233,NVD CVE API
+training,case_056,CVE-2026-53197,2026-06-25T09:16:37.227,NVD CVE API
+training,case_057,CVE-2026-53180,2026-06-25T09:16:35.377,NVD CVE API
+training,case_058,CVE-2026-53125,2026-06-24T17:17:27.770,NVD CVE API
+training,case_059,CVE-2026-53122,2026-06-24T17:17:26.573,NVD CVE API
+training,case_060,CVE-2026-53103,2026-06-24T17:17:24.567,NVD CVE API
+training,case_061,CVE-2026-53311,2026-06-26T20:17:24.423,NVD CVE API
+training,case_062,CVE-2026-53243,2026-06-25T09:16:42.260,NVD CVE API
+training,case_063,CVE-2026-53225,2026-06-25T09:16:40.297,NVD CVE API
+training,case_064,CVE-2026-53218,2026-06-25T09:16:39.500,NVD CVE API
+training,case_065,CVE-2026-53170,2026-06-25T09:16:34.370,NVD CVE API
+training,case_066,CVE-2026-53167,2026-06-25T09:16:34.073,NVD CVE API
+training,case_067,CVE-2026-53142,2026-06-25T09:16:31.513,NVD CVE API
+training,case_068,CVE-2026-53082,2026-06-24T17:17:22.343,NVD CVE API
+training,case_069,CVE-2026-53029,2026-06-24T17:17:14.297,NVD CVE API
+training,case_070,CVE-2026-52989,2026-06-24T17:17:09.707,NVD CVE API
+training,case_071,CVE-2026-53085,2026-06-24T17:17:22.670,NVD CVE API
+training,case_072,CVE-2026-53033,2026-06-24T17:17:14.700,NVD CVE API
+training,case_073,CVE-2026-53006,2026-06-24T17:17:11.750,NVD CVE API
+training,case_074,CVE-2026-52976,2026-06-24T17:17:08.183,NVD CVE API
+training,case_075,CVE-2026-52973,2026-06-24T17:17:07.840,NVD CVE API
+training,case_076,CVE-2026-52952,2026-06-24T17:17:05.333,NVD CVE API
+training,case_077,CVE-2026-52950,2026-06-24T17:17:05.127,NVD CVE API
+training,case_078,CVE-2026-52924,2026-06-24T08:16:22.430,NVD CVE API
+training,case_079,CVE-2026-52923,2026-06-24T08:16:22.300,NVD CVE API
+training,case_080,CVE-2026-46243,2026-06-01T17:17:34.173,NVD CVE API
+training,case_081,CVE-2026-53108,2026-06-24T17:17:25.107,NVD CVE API
+training,case_082,CVE-2026-53086,2026-06-24T17:17:22.777,NVD CVE API
+training,case_083,CVE-2026-53050,2026-06-24T17:17:16.887,NVD CVE API
+training,case_084,CVE-2026-53020,2026-06-24T17:17:13.317,NVD CVE API
+training,case_085,CVE-2026-53008,2026-06-24T17:17:12.023,NVD CVE API
+training,case_086,CVE-2026-52991,2026-06-24T17:17:09.953,NVD CVE API
+training,case_087,CVE-2026-46298,2026-06-08T17:16:48.280,NVD CVE API
+training,case_088,CVE-2026-46275,2026-06-08T16:16:40.863,NVD CVE API
+training,case_089,CVE-2026-46272,2026-06-03T18:16:29.023,NVD CVE API
+training,case_090,CVE-2026-46187,2026-05-28T10:16:34.333,NVD CVE API
+training,case_091,CVE-2026-53319,2026-06-26T20:17:25.230,NVD CVE API
+training,case_092,CVE-2026-53292,2026-06-26T20:17:22.090,NVD CVE API
+training,case_093,CVE-2026-53285,2026-06-26T20:17:21.157,NVD CVE API
+training,case_094,CVE-2026-53169,2026-06-25T09:16:34.283,NVD CVE API
+training,case_095,CVE-2026-53039,2026-06-24T17:17:15.540,NVD CVE API
+training,case_096,CVE-2026-52961,2026-06-24T17:17:06.360,NVD CVE API
+training,case_097,CVE-2026-52954,2026-06-24T17:17:05.530,NVD CVE API
+training,case_098,CVE-2026-46287,2026-06-08T17:16:46.770,NVD CVE API
+training,case_099,CVE-2026-46220,2026-05-28T10:16:37.640,NVD CVE API
+training,case_100,CVE-2026-46117,2026-05-28T10:16:27.203,NVD CVE API
+held_out,case_101,CVE-2026-53256,2026-06-25T09:16:43.593Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_102,CVE-2026-53248,2026-06-25T09:16:42.753Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_103,CVE-2026-53247,2026-06-25T09:16:42.657Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_104,CVE-2026-53240,2026-06-25T09:16:41.960Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_105,CVE-2026-53239,2026-06-25T09:16:41.840Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_106,CVE-2026-53234,2026-06-25T09:16:41.293Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_107,CVE-2026-53212,2026-06-25T09:16:38.793Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_108,CVE-2026-53198,2026-06-25T09:16:37.323Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_109,CVE-2026-53193,2026-06-25T09:16:36.757Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_110,CVE-2026-53192,2026-06-25T09:16:36.637Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_111,CVE-2026-53299,2026-06-26T20:17:23.110Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_112,CVE-2026-53298,2026-06-26T20:17:23.003Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_113,CVE-2026-53297,2026-06-26T20:17:22.900Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_114,CVE-2026-53291,2026-06-26T20:17:21.967Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_115,CVE-2026-53289,2026-06-26T20:17:21.720Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_116,CVE-2026-53284,2026-06-26T20:17:20.790Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_117,CVE-2026-53283,2026-06-26T20:17:20.253Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_118,CVE-2026-53281,2026-06-26T20:17:19.600Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_119,CVE-2026-53280,2026-06-26T20:17:19.500Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_120,CVE-2026-53278,2026-06-26T20:17:19.277Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_121,CVE-2026-53210,2026-06-25T09:16:38.603Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_122,CVE-2026-53181,2026-06-25T09:16:35.470Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_123,CVE-2026-53140,2026-06-25T09:16:31.337Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_124,CVE-2026-53134,2026-06-25T09:16:30.657Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_125,CVE-2026-53132,2026-06-25T09:16:30.437Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_126,CVE-2026-53127,2026-06-24T17:17:28.253Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_127,CVE-2026-53121,2026-06-24T17:17:26.473Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_128,CVE-2026-53113,2026-06-24T17:17:25.700Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_129,CVE-2026-53106,2026-06-24T17:17:24.860Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_130,CVE-2026-53104,2026-06-24T17:17:24.667Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_131,CVE-2026-53147,2026-06-25T09:16:32.037Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_132,CVE-2026-53138,2026-06-25T09:16:31.150Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_133,CVE-2026-53078,2026-06-24T17:17:21.850Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_134,CVE-2026-53076,2026-06-24T17:17:21.623Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_135,CVE-2026-53044,2026-06-24T17:17:16.200Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_136,CVE-2026-53038,2026-06-24T17:17:15.403Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_137,CVE-2026-52999,2026-06-24T17:17:10.913Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_138,CVE-2026-52968,2026-06-24T17:17:07.243Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_139,CVE-2026-52967,2026-06-24T17:17:07.127Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_140,CVE-2026-52958,2026-06-24T17:17:06.033Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_141,CVE-2026-53143,2026-06-25T09:16:31.607Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_142,CVE-2026-53137,2026-06-25T09:16:31.030Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_143,CVE-2026-53136,2026-06-25T09:16:30.910Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_144,CVE-2026-53059,2026-06-24T17:17:18.463Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_145,CVE-2026-53043,2026-06-24T17:17:16.063Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_146,CVE-2026-53041,2026-06-24T17:17:15.830Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_147,CVE-2026-53016,2026-06-24T17:17:12.893Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_148,CVE-2026-53004,2026-06-24T17:17:11.510Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_149,CVE-2026-53002,2026-06-24T17:17:11.263Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_150,CVE-2026-52992,2026-06-24T17:17:10.083Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_151,CVE-2026-53101,2026-06-24T17:17:24.377Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_152,CVE-2026-53100,2026-06-24T17:17:24.257Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_153,CVE-2026-53072,2026-06-24T17:17:21.017Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_154,CVE-2026-53071,2026-06-24T17:17:20.843Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_155,CVE-2026-53062,2026-06-24T17:17:19.030Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_156,CVE-2026-53054,2026-06-24T17:17:17.430Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_157,CVE-2026-53049,2026-06-24T17:17:16.777Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_158,CVE-2026-53037,2026-06-24T17:17:15.263Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_159,CVE-2026-53035,2026-06-24T17:17:14.990Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_160,CVE-2026-52979,2026-06-24T17:17:08.513Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_161,CVE-2026-52985,2026-06-24T17:17:09.260Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_162,CVE-2026-46257,2026-06-03T18:16:26.733Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_163,CVE-2026-80559,2026-08-26T15:17:10.690Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_164,CVE-2026-80586,2026-08-26T15:17:14.873Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_165,CVE-2026-80640,2026-08-28T08:16:48.910Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_166,CVE-2026-80656,2026-08-28T08:16:50.700Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_167,CVE-2026-80707,2026-08-28T08:16:56.277Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_168,CVE-2026-80711,2026-08-28T08:16:56.740Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_169,CVE-2026-89480,2026-09-11T20:19:29.470Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_170,CVE-2026-89483,2026-09-11T20:19:29.880Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_171,CVE-2026-46176,2026-05-28T10:16:33.220Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_172,CVE-2026-46166,2026-05-28T10:16:32.250Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_173,CVE-2026-46125,2026-05-28T10:16:28.047Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_174,CVE-2026-45998,2026-05-27T14:17:17.407Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_175,CVE-2026-45972,2026-05-27T14:17:14.173Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_176,CVE-2026-31703,2026-05-01T14:16:20.263Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_177,CVE-2026-53175,2026-06-25T09:16:34.840Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_178,CVE-2026-53270,2026-06-25T09:16:45.123Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_179,CVE-2026-53266,2026-06-25T09:16:44.643Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_180,CVE-2026-53228,2026-06-25T09:16:40.657Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_181,CVE-2026-80628,2026-08-28T08:16:47.007Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_182,CVE-2026-80653,2026-08-28T08:16:50.350Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_183,CVE-2026-80655,2026-08-28T08:16:50.573Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_184,CVE-2026-80668,2026-08-28T08:16:52.080Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_185,CVE-2026-80677,2026-08-28T08:16:52.983Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_186,CVE-2026-80678,2026-08-28T08:16:53.107Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_187,CVE-2026-80683,2026-08-28T08:16:53.737Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_188,CVE-2026-80719,2026-08-28T08:16:57.720Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_189,CVE-2026-89474,2026-09-11T20:19:28.687Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_190,CVE-2026-89478,2026-09-11T20:19:29.206Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_191,CVE-2026-68252,2026-08-10T13:20:13.750Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_192,CVE-2026-68299,2026-08-10T13:20:19.440Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_193,CVE-2026-68421,2026-08-10T13:20:35.980Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_194,CVE-2026-68430,2026-08-12T00:17:43.067Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_195,CVE-2026-72173,2026-08-15T06:21:35.460Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_196,CVE-2026-72280,2026-08-15T06:21:58.270Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_197,CVE-2026-74704,2026-08-22T16:16:45.090Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_198,CVE-2026-74716,2026-08-22T16:16:46.443Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_199,CVE-2026-80607,2026-08-28T08:16:44.677Z,secondary_campaign_v2/private/case_metadata.csv
+held_out,case_200,CVE-2026-80644,2026-08-28T08:16:49.290Z,secondary_campaign_v2/private/case_metadata.csv

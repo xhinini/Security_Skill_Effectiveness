@@ -1,0 +1,594 @@
+{
+  "skills": [
+    {
+      "key": "cybersecurity-review",
+      "skill_name": "cybersecurity-review",
+      "repo": "https://github.com/ericmjl/skills.git",
+      "cache": "ericmjl",
+      "ref": "4bc80d7f72d8cb1ba6d44a114e6a8524aed81555",
+      "path": "skills/cybersecurity-review",
+      "prompt": "review.prompt.txt",
+      "index": 1,
+      "batch": 5,
+      "snapshot_sha256": "10ceca7edea039e26c48f484fc4ce7ece702eaf118d900c9f9c33964aa8ef47e",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "find-bugs",
+      "skill_name": "find-bugs",
+      "repo": "https://github.com/sickn33/agentic-awesome-skills.git",
+      "cache": "sickn33",
+      "ref": "5cf4dfeb13ea966daa1e117897689cd7991e3f44",
+      "path": "plugins/agentic-awesome-skills-claude/skills/find-bugs",
+      "prompt": "review.prompt.txt",
+      "index": 2,
+      "batch": 5,
+      "snapshot_sha256": "42ab8ec9c7629e5c9b122c02d9f4768c56cf304ca9eed245c808460006b10b67",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "security-auditor",
+      "skill_name": "security-auditor",
+      "repo": "https://github.com/carycoooper/Hermes-Skill-Factory.git",
+      "cache": "hermes-skill-factory",
+      "ref": "67d15b587e575b2ca4ecf7c3e8a80eec99b8cee0",
+      "path": "skills/security/security-auditor",
+      "prompt": "review.prompt.txt",
+      "index": 3,
+      "batch": 5,
+      "snapshot_sha256": "37d97acecd626d8b923d46484384215f326992849a6d081b0bd522622424b6eb",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "workerd-safety-review",
+      "skill_name": "workerd-safety-review",
+      "repo": "https://github.com/cloudflare/workerd.git",
+      "cache": "cloudflare-workerd",
+      "ref": "fffb83fc1e7c0bdcec92ad9f83bc2d9bb523bc12",
+      "path": ".opencode/skills/workerd-safety-review",
+      "prompt": "review.prompt.txt",
+      "index": 4,
+      "batch": 5,
+      "snapshot_sha256": "eecd8dddb5e1df760b37882a742f2108b949f181776da52eeebaf42c680cbc69",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "mcouthon-security-review",
+      "skill_name": "security-review",
+      "repo": "https://github.com/mcouthon/agents.git",
+      "cache": "mcouthon-agents",
+      "ref": "a4bcb12379c9856a47741c8287d31c1a69796f59",
+      "path": "generated/claude/skills/security-review",
+      "prompt": "review.prompt.txt",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "LSP",
+        "Bash",
+        "Task"
+      ],
+      "index": 5,
+      "batch": 5,
+      "snapshot_sha256": "cbe81ee3a710889659ac83032e8ca58d068368fbf67b8a30781a8394d68ff3c1",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "secure-code-review",
+      "skill_name": "secure-code-review",
+      "repo": "https://github.com/UnitOneAI/SecuritySkills.git",
+      "cache": "unitone-securityskills",
+      "ref": "70bc259bb01abb3015ad2ad859ad5253cbf0bcab",
+      "path": "skills/appsec/secure-code-review",
+      "prompt": "review.prompt.txt",
+      "index": 6,
+      "batch": 5,
+      "snapshot_sha256": "f18fb31b59ac983f0235301765eb5f45f4db14089353338e9a05e11f96f8e086",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "code-security-review",
+      "skill_name": "code-security-review",
+      "repo": "https://github.com/DauQuangThanh/hanoi-rainbow.git",
+      "cache": "hanoi-rainbow",
+      "ref": "0e2ebaea024ad494bfd39cba73effa61a9c978cf",
+      "path": "skills/code-security-review",
+      "prompt": "review.prompt.txt",
+      "index": 7,
+      "batch": 5,
+      "snapshot_sha256": "c36b67cf510c2b0e9ac7c455b75e66d74ef1f7ea6538222aa03c95e4f3c093ce",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "audit-design-weaknesses",
+      "skill_name": "audit-design-weaknesses",
+      "repo": "https://github.com/CTFfactory/salt.git",
+      "cache": "ctffactory-salt",
+      "ref": "f42c85f35285b5232b4710e9b1b74f71cc23e680",
+      "path": ".github/skills/audit-design-weaknesses",
+      "prompt": "review.prompt.txt",
+      "index": 8,
+      "batch": 5,
+      "snapshot_sha256": "ba725b683038a252b6753cae34cded2bfe0348e3ef69f6c3cfc69d3645234660",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "posthog-security-audit",
+      "skill_name": "security-audit",
+      "repo": "https://github.com/PostHog/posthog.git",
+      "cache": "posthog",
+      "ref": "ceb5a519654d2383eabd2b31dcb08dcacd8b4e34",
+      "path": ".agents/skills/security-audit",
+      "prompt": "review.prompt.txt",
+      "index": 9,
+      "batch": 5,
+      "snapshot_sha256": "c3746ad0844827d5c275dd46169147467a796700c07a5385cd50786e7012739f",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "code-vulnerability-review",
+      "skill_name": "code-vulnerability-review",
+      "repo": "https://github.com/philo-groves/codex-attack.git",
+      "cache": "codex-attack",
+      "ref": "f1ae75a5762104ef60501062e2cf8cdc8c070362",
+      "path": "skills/code-vulnerability-review",
+      "prompt": "review.prompt.txt",
+      "index": 10,
+      "batch": 5,
+      "snapshot_sha256": "c1ed1c72aaae4a5768d1657f07df250c4136feb1bfaecd6142e9087b3b3c0f4d",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "sast-flow-tracer",
+      "skill_name": "sast-flow-tracer",
+      "repo": "https://github.com/H-mmer/pentest-agents.git",
+      "cache": "pentest-agents",
+      "ref": "41d49b644e1bc0f3031819410fc5406918360c4e",
+      "path": "providers/cursor/.cursor/skills/agent-sast-flow-tracer",
+      "prompt": "sast-flow.prompt.txt",
+      "collect_artifacts": [
+        "sast-work/flows.json"
+      ],
+      "workspace_files": [
+        {
+          "destination": "entries.json",
+          "content": "{\"case_id\":\"{CASE_ID}\",\"target_files\":{TARGET_FILES_JSON},\"entry_points\":[],\"note\":\"No independent precomputed entry-point inventory is supplied; derive candidates from the target source.\"}\n"
+        },
+        {
+          "destination": "dangers.json",
+          "content": "{\"case_id\":\"{CASE_ID}\",\"target_files\":{TARGET_FILES_JSON},\"dangerous_operations\":[],\"note\":\"No independent precomputed sink inventory is supplied; derive candidates from the target source.\"}\n"
+        }
+      ],
+      "index": 11,
+      "batch": 5,
+      "snapshot_sha256": "2f06288753b59f7c0191a9faa300c63e8b01afdbfa66e571524b8b24f8c1105b",
+      "native_prompt": "{SKILL_INVOCATION}\n\nTrace security-relevant flows for these exact target files:\n\n{TARGET_FILES}\n\nRead `entries.json` and `dangers.json`. Their empty candidate arrays mean no\nindependent prior-stage candidates were supplied; derive candidate entry\npoints and dangerous operations from the target source, then apply the\nskill's native flow-tracing method. Write the native flow JSON to the fixed\nresult path `sast-work/flows.json` and summarize it in the final response.\nDo not create any other output files.\n\nAll Claude agents and subagents must use Haiku 4.5. Use only the supplied\nrepository and skill. Do not use Git history, internet, patches, fixed files,\nexternal metadata, builds, or source execution. Do not modify source files.\n"
+    },
+    {
+      "key": "security-deep-dive",
+      "skill_name": "security-deep-dive",
+      "repo": "https://github.com/alpha-omega-security/scrutineer.git",
+      "cache": "scrutineer",
+      "ref": "7a45619bb611d525ce67fb9b0c96bea2a4849b87",
+      "path": "skills/security-deep-dive",
+      "prompt": "scrutineer-deep.prompt.txt",
+      "source_subdirectory": "src",
+      "collect_artifacts": [
+        "report.json"
+      ],
+      "workspace_files": [
+        {
+          "source": "skills/security-deep-dive/schema.json",
+          "destination": "schema.json",
+          "packaged_source": "support/security-deep-dive/skills/security-deep-dive/schema.json"
+        },
+        {
+          "destination": "context.json",
+          "content": "{\"repository\":{\"name\":\"linux\"},\"scrutineer\":{\"api_base\":\"\",\"token\":\"\",\"repository_id\":\"{CASE_ID}\",\"scan_subpath\":null},\"operator_target_files\":{TARGET_FILES_JSON}}\n"
+        }
+      ],
+      "index": 12,
+      "batch": 5,
+      "snapshot_sha256": "834decf6893c577ea27c1f0fef6d46fefd5d960525a737f5af426fd728b42530",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse `.` as the workspace root and `./src` as the source root. Audit these exact\ntarget files under `./src`:\n\n{TARGET_FILES}\n\nScope the native inventory-first workflow to the target files, expanding to\nother files under `./src` only when needed for a concrete trace. Read\n`context.json` and `schema.json`, and write the final native report only to\n`report.json` at the workspace root. Empty API fields mean no prior scans are\navailable; continue with local source analysis as the skill specifies.\n\nAll Claude agents and subagents must use Haiku 4.5. Do not use the internet,\nexternal files, Git history, CVE databases, patches, fixed files, evaluator\nmetadata, prior outputs, builds, or source execution. Do not modify files\nunder `./src`.\n"
+    },
+    {
+      "key": "sast-gap-analyzer",
+      "skill_name": "sast-gap-analyzer",
+      "repo": "https://github.com/H-mmer/pentest-agents.git",
+      "cache": "pentest-agents",
+      "ref": "41d49b644e1bc0f3031819410fc5406918360c4e",
+      "path": "providers/cursor/.cursor/skills/agent-sast-gap-analyzer",
+      "prompt": "sast-gap.prompt.txt",
+      "collect_artifacts": [
+        "candidates.json"
+      ],
+      "workspace_files": [
+        {
+          "destination": "flows.json",
+          "content": "{\"case_id\":\"{CASE_ID}\",\"target_files\":{TARGET_FILES_JSON},\"flows\":[],\"note\":\"No independent precomputed flow inventory is supplied; derive candidate flows from the target source.\"}\n"
+        },
+        {
+          "destination": "static-warnings.json",
+          "content": "{\"case_id\":\"{CASE_ID}\",\"warnings\":[],\"note\":\"No prior scanner warnings are supplied.\"}\n"
+        }
+      ],
+      "index": 13,
+      "batch": 5,
+      "snapshot_sha256": "2f9f5f4c2f596d8921ac97c65acc125645c156471b1cef750decb3ec3180caa7",
+      "native_prompt": "{SKILL_INVOCATION}\n\nAnalyze validation gaps for these exact target files:\n\n{TARGET_FILES}\n\nRead `flows.json` and `static-warnings.json`. Their empty arrays mean no\nindependent prior-stage candidates or scanner warnings were supplied; derive\ncandidate source-to-sink flows from the target source, then apply the skill's\nnative gap-analysis categories. Write the native candidate JSON to\n`candidates.json` at the repository root and also summarize it in the final\nresponse. Do not create `sast-work` files.\n\nAll Claude agents and subagents must use Haiku 4.5. Use only the supplied\nrepository and skill. Do not use Git history, internet, patches, fixed files,\nexternal metadata, builds, or source execution. Do not modify source files.\n"
+    },
+    {
+      "key": "crewrig-security",
+      "skill_name": "security",
+      "repo": "https://github.com/crewrig/crewrig.git",
+      "cache": "crewrig",
+      "ref": "4b28be8360ae81b4ab2f8fca03e181eabf42edef",
+      "path": ".agents/skills/security",
+      "prompt": "review.prompt.txt",
+      "index": 14,
+      "batch": 5,
+      "snapshot_sha256": "6cd8033ab43e19c6b019fc8d7040ee23e7313afc80c81ed4ff5d728b98a58049",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "ai-devkit-security-review",
+      "skill_name": "security-review",
+      "repo": "https://github.com/codeaholicguy/ai-devkit.git",
+      "cache": "ai-devkit",
+      "ref": "c1f5930a4e6c19c860528ce83fe379e79b491c35",
+      "path": "skills/security-review",
+      "prompt": "review.prompt.txt",
+      "index": 15,
+      "batch": 5,
+      "snapshot_sha256": "f7c0feb4ba64403913bf28ee78b6986fde72be67c619cd0c17eec1a995028446",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "commit-security-scan",
+      "skill_name": "commit-security-scan",
+      "repo": "https://github.com/codexstar69/bug-hunter.git",
+      "cache": "bug-hunter",
+      "ref": "3be69733a27aa04d4f5620df203c05350d162067",
+      "path": "skills/commit-security-scan",
+      "prompt": "commit-security-scan.prompt.txt",
+      "collect_artifacts": [
+        ".bug-hunter/hunter-findings.json",
+        ".bug-hunter/report.md"
+      ],
+      "index": 16,
+      "batch": 5,
+      "snapshot_sha256": "a4191322f1f1249dffaa3161f430a2b226594f3075d275a91bcbe3556f31453a",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nFollow the selected skill's native procedure. Write its two native outputs:\n`.bug-hunter/hunter-findings.json` and `.bug-hunter/report.md`. These are result\nartifacts, not source modifications. Also summarize the findings in the final\nresponse. All Claude agents and subagents must use Haiku 4.5. Use locally\navailable tools when the skill calls for them and they apply to Linux C. If no\nsupported vulnerability is found, write valid empty/no-finding native reports.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify Linux source files.\n"
+    },
+    {
+      "key": "sickn33-differential-review",
+      "skill_name": "differential-review",
+      "repo": "https://github.com/sickn33/agentic-awesome-skills.git",
+      "cache": "sickn33",
+      "ref": "5cf4dfeb13ea966daa1e117897689cd7991e3f44",
+      "path": "plugins/agentic-awesome-skills-claude/skills/differential-review",
+      "prompt": "differential.prompt.txt",
+      "collect_artifacts": [
+        "DIFFERENTIAL_REVIEW_REPORT.md"
+      ],
+      "index": 17,
+      "batch": 5,
+      "snapshot_sha256": "f42aa890252c0422e387c56266f2c643a4ab209691935de9ab3486450436e657",
+      "native_prompt": "{SKILL_INVOCATION}\n\nPerform the skill's differential security review over these exact target files:\n\n{TARGET_FILES}\n\nThe target list is the complete changed-file scope. No patch or baseline is\navailable to the model; review the full before-fix contents of these files and\nuse in-tree context only when needed. Follow the native methodology and write\n`DIFFERENTIAL_REVIEW_REPORT.md` at the repository root.\n\nAll Claude agents and subagents must use Haiku 4.5. Do not use the internet,\nexternal files, Git history, CVE databases, patches, fixed files, evaluator\nmetadata, or prior outputs. Do not build, execute, or modify Linux source.\n"
+    },
+    {
+      "key": "concurrency-lens",
+      "skill_name": "concurrency-lens",
+      "repo": "https://github.com/Chykalophia/cklph-marketplace.git",
+      "cache": "cklph-marketplace",
+      "ref": "be1b34b24a79d2141afb7892127bf50b78928686",
+      "path": "plugins/cklph-audit/skills/concurrency-lens",
+      "prompt": "review.prompt.txt",
+      "index": 18,
+      "batch": 5,
+      "snapshot_sha256": "5f3fe1288829828bd525d2c5df508e868a1227720f0c9548ed2551ec04535739",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "cortex-bug-hunter",
+      "skill_name": "bug-hunter",
+      "repo": "https://github.com/Codeleafly/Cortex.git",
+      "cache": "cortex",
+      "ref": "52e9b68d2987671e115aa6c197a0220920260e45",
+      "path": "skills/bug-hunter",
+      "prompt": "review.prompt.txt",
+      "index": 19,
+      "batch": 5,
+      "snapshot_sha256": "6af6e4748de90c0eb56b747939e9bb759d87fce72ff6071f595d99fdf3869ce7",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "abstract-state-analyzer",
+      "skill_name": "abstract-state-analyzer",
+      "repo": "https://github.com/ArabelaTso/Skills-4-SE.git",
+      "cache": "skills-4-se",
+      "ref": "4f38503747e0617504bce5329283ef837d375c09",
+      "path": "skills/abstract-state-analyzer",
+      "prompt": "review.prompt.txt",
+      "index": 20,
+      "batch": 5,
+      "snapshot_sha256": "8aaa9d19d4620fcfb8c3e51420919ae8da8069d5cbfec8de18ff30117625dffc",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "bug-hunter-hunter",
+      "skill_name": "hunter",
+      "repo": "https://github.com/codexstar69/bug-hunter.git",
+      "cache": "bug-hunter",
+      "ref": "3be69733a27aa04d4f5620df203c05350d162067",
+      "path": "skills/hunter",
+      "prompt": "hunter.prompt.txt",
+      "collect_artifacts": [
+        ".bug-hunter/hunter-findings.json"
+      ],
+      "index": 21,
+      "batch": 6,
+      "snapshot_sha256": "0e338ae35e393a6d77cc78ef16902a09bc331fc9a97393d3461a27386bfc4829",
+      "native_prompt": "{SKILL_INVOCATION}\n\nAnalyze these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat this list as the complete assignment and start with every listed file.\nFollow the Hunter skill's native multi-phase process. Write its canonical JSON\narray to `.bug-hunter/hunter-findings.json`; write `[]` when no supported\nfinding exists. Also summarize the result in the final response. You may read\nother in-repository files only to resolve a target-file caller, callee, type,\nmacro, control-flow, data-flow, ownership, lifetime, locking, or subsystem\ninvariant. All parent agents and subagents must use Haiku 4.5.\n\nDo not use doc-lookup, Context Hub, Context7, internet, Git history, CVE data,\npatches, fixed files, evaluator metadata, previous outputs, or external files.\nDo not build or execute Linux, install software, or modify Linux source files.\n"
+    },
+    {
+      "key": "security-review-deep",
+      "skill_name": "security-review-deep",
+      "repo": "https://github.com/charliecpeterson/claude-config.git",
+      "cache": "claude-config",
+      "ref": "353dc5114c57ce462bf570525152f238bdfe25aa",
+      "path": "skills/security-review-deep",
+      "prompt": "security-review-deep.prompt.txt",
+      "collect_artifacts": [
+        "security-report.md"
+      ],
+      "index": 22,
+      "batch": 6,
+      "snapshot_sha256": "19a975dfe9e1ca20b9a8d3c986b9771bbc2be1936f50942894efd0bca8beb310",
+      "native_prompt": "{SKILL_INVOCATION}\n\nAudit these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope instead of a Git diff. Start\nwith every target file and inspect other in-repository files only when required\nfor semantic context. Follow the skill's native scanner and threat-model phases.\nWrite the complete native Markdown report to `security-report.md` and summarize\nit in the final response. Do not create any other repository output files. All\nparent agents and subagents must use Haiku 4.5.\n\nApplicable local scanners are Semgrep, CodeQL, Gitleaks, TruffleHog, and Trivy.\nLimit scanner commands to the supplied target files. For Semgrep, use only the\npinned Linux C rules at `/scratch/user/vulhunter/skill-vuldet-batch2-data/tools/semgrep-rules/linux-c-security.yml`.\nWrite temporary scanner data only under `/tmp`. Do not create a CodeQL database,\nbuild Linux, run source code, use network-fetched rules, or run dependency/CVE\nscanners when no dependency manifest is in scope.\n\nDo not use internet, live advisory services, MCP CVE lookup, Git history, CVE\ndatabases, patches, fixed files, evaluator metadata, prior outputs, or files\noutside the supplied repository and declared scanner dependencies. Do not\ninstall software or modify Linux source files.\n"
+    },
+    {
+      "key": "source-code-audit",
+      "skill_name": "source-code-audit",
+      "repo": "https://github.com/Bajinder17/AutoStrike.git",
+      "cache": "autostrike",
+      "ref": "37c53bcc96fc99bf2aa464996b0e6c4bfc639b5d",
+      "path": "skills/source-code-audit",
+      "prompt": "scanner-review.prompt.txt",
+      "index": 23,
+      "batch": 6,
+      "snapshot_sha256": "5d852307906439f9e9d5996a91f2f7ce47d13397cecee34e929f1b5c4a04b9af",
+      "native_prompt": "{SKILL_INVOCATION}\n\nAudit these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope instead of a Git diff. Start\nwith every target file and inspect other in-repository files only when required\nto resolve types, macros, callers, callees, control flow, data flow, ownership,\nlifetime, locking, or subsystem invariants. Follow the selected skill's native\nphases and report format. Return the report in the final response without\ncreating repository output files. All parent agents and subagents must use\nHaiku 4.5.\n\nApplicable local scanners are available: Semgrep, CodeQL, Gitleaks,\nTruffleHog, and Trivy. Scanner commands must remain limited to the supplied\ntarget files. For Semgrep, use the pinned local Linux C rules at\n`/scratch/user/vulhunter/skill-vuldet-batch2-data/tools/semgrep-rules/linux-c-security.yml`;\ndo not use registry, `auto`, or network-fetched rules. Write temporary scanner\noutput only under `/tmp`. Do not create a CodeQL database, build Linux, or run\nLinux source. Dependency/CVE scanners are not applicable because no dependency\nmanifest is in scope. State skipped or inapplicable phases as the skill directs.\n\nDo not use internet, live advisory services, MCP CVE lookup, Git history, CVE\ndatabases, patches, fixed files, evaluator metadata, prior outputs, or files\noutside the supplied repository and declared local scanner dependencies. Do\nnot install software or modify source files.\n"
+    },
+    {
+      "key": "ecmwf-security-audit",
+      "skill_name": "security-audit",
+      "repo": "https://github.com/ecmwf/codex.git",
+      "cache": "ecmwf-codex",
+      "ref": "64e25f9130efbe42eeb5bc0b6934b853c5ef4d40",
+      "path": "Agent Skills/security-audit",
+      "prompt": "scanner-review.prompt.txt",
+      "index": 24,
+      "batch": 6,
+      "snapshot_sha256": "2f4c93b873814a25e2e11c148126174c4097d1abc279e3602acf3e1b6c2a25e1",
+      "native_prompt": "{SKILL_INVOCATION}\n\nAudit these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope instead of a Git diff. Start\nwith every target file and inspect other in-repository files only when required\nto resolve types, macros, callers, callees, control flow, data flow, ownership,\nlifetime, locking, or subsystem invariants. Follow the selected skill's native\nphases and report format. Return the report in the final response without\ncreating repository output files. All parent agents and subagents must use\nHaiku 4.5.\n\nApplicable local scanners are available: Semgrep, CodeQL, Gitleaks,\nTruffleHog, and Trivy. Scanner commands must remain limited to the supplied\ntarget files. For Semgrep, use the pinned local Linux C rules at\n`/scratch/user/vulhunter/skill-vuldet-batch2-data/tools/semgrep-rules/linux-c-security.yml`;\ndo not use registry, `auto`, or network-fetched rules. Write temporary scanner\noutput only under `/tmp`. Do not create a CodeQL database, build Linux, or run\nLinux source. Dependency/CVE scanners are not applicable because no dependency\nmanifest is in scope. State skipped or inapplicable phases as the skill directs.\n\nDo not use internet, live advisory services, MCP CVE lookup, Git history, CVE\ndatabases, patches, fixed files, evaluator metadata, prior outputs, or files\noutside the supplied repository and declared local scanner dependencies. Do\nnot install software or modify source files.\n"
+    },
+    {
+      "key": "agentsmesh-security-auditor",
+      "skill_name": "am-agent-code-security-auditor",
+      "repo": "https://github.com/sampleXbro/agentsmesh.git",
+      "cache": "agentsmesh",
+      "ref": "ac8e24449c34f19925721dc60a0d902f5217b1e3",
+      "path": ".agents/skills/am-agent-code-security-auditor",
+      "prompt": "review.prompt.txt",
+      "index": 25,
+      "batch": 6,
+      "snapshot_sha256": "4b8f681ef81569ace673901069e36ab344e8e5b00c7e23072db8d74f2988f26d",
+      "native_prompt": "{SKILL_INVOCATION}\n\nReview these exact target files for security vulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target-file list as the complete changed-file or review scope when\nthe skill normally expects a branch, commit, pull request, or diff. The\nsupplied tree is the isolated before-fix snapshot, so inspect the complete\ntarget files instead of Git history. Start with every target file. Inspect\nother files inside the supplied repository only when needed to understand\ntypes, macros, callers, callees, control flow, data flow, ownership, lifetime,\nlocking, or subsystem invariants.\n\nUse the selected skill's native procedure and normal report format. All\nClaude agents and subagents must use Haiku 4.5. Use locally available tools\nwhen the skill calls for them and they apply to Linux C. If no supported\nvulnerability is found, follow the skill's normal no-finding response.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, or prior run outputs. Do not install tools,\nbuild or execute Linux, or modify source files.\n"
+    },
+    {
+      "key": "plugin-security-audit",
+      "skill_name": "security-audit",
+      "repo": "https://github.com/charlesjones-dev/claude-code-plugins-dev.git",
+      "cache": "claude-code-plugins-dev",
+      "ref": "b6cd024993a1293b5a6f5d3ab4fc51490215c91f",
+      "path": "plugins/ai-security/skills/security-audit",
+      "prompt": "plugin-security-audit.prompt.txt",
+      "collect_artifacts": [
+        "docs/security/security-audit.md"
+      ],
+      "index": 26,
+      "batch": 6,
+      "snapshot_sha256": "92ff7a3706935de03982e37b73a465719923e2be44cc30bc34e62f91597b1ee8",
+      "native_prompt": "{SKILL_INVOCATION}\n\nPerform the native security audit on these exact target files:\n\n{TARGET_FILES}\n\nTreat the list as the complete audit scope. Start with every target file and\ninspect other in-repository files only for necessary semantic context. Use the\nTask tool as directed; if the plugin-qualified subagent name is unavailable,\nlaunch a general-purpose Task subagent with the skill's security-auditor brief.\nAll parent agents and subagents must use Haiku 4.5. Write the complete native\nreport to `docs/security/security-audit.md` and summarize it in the final\nresponse. This fixed result name replaces only the timestamped filename.\n\nDo not ask interactive questions. Do not use internet, Git history, CVE data,\npatches, fixed files, evaluator metadata, prior outputs, builds, execution, or\nexternal files. Do not install software or modify Linux source files.\n"
+    },
+    {
+      "key": "vbs-scan-security",
+      "skill_name": "vbs-scan-security",
+      "repo": "https://github.com/tanviet12/vbsec.git",
+      "cache": "vbsec",
+      "ref": "92b44879c4c6e33f1d322ba224fcc4576579e061",
+      "path": "skills/antigravity/vbs-scan-security",
+      "prompt": "vbsec.prompt.txt",
+      "collect_artifacts": [
+        "vbsec-reports/scan.md"
+      ],
+      "index": 27,
+      "batch": 6,
+      "snapshot_sha256": "e0c9cba9a96bdf81cf6fc9dca20b944ba9e01de16253097146d7bfb1f13968ad",
+      "native_prompt": "{SKILL_INVOCATION}\n\nScan these exact target files in English:\n\n{TARGET_FILES}\n\nTreat the target list as the complete scan scope and apply the skill's native\ngeneric and C/C++-relevant rules. Start with all target files and read other\nin-repository files only for required semantic context. Write the complete\nnative report to `vbsec-reports/scan.md` and summarize it in the final response.\nThis fixed filename replaces only the timestamped filename. All parent agents\nand subagents must use Haiku 4.5.\n\nDo not use internet, Git history, CVE databases, patches, fixed files,\nevaluator metadata, previous outputs, builds, execution, or external files. Do\nnot install software or modify Linux source files. Do not create temporary\nrepository files outside `vbsec-reports/scan.md`.\n"
+    },
+    {
+      "key": "scrutineer-vuln-scan",
+      "skill_name": "vuln-scan",
+      "repo": "https://github.com/alpha-omega-security/scrutineer.git",
+      "cache": "scrutineer",
+      "ref": "3074c5ffc06be40fc65da4362dc7a21203a1124d",
+      "path": "skills/vuln-scan",
+      "prompt": "scrutineer-vuln-scan.prompt.txt",
+      "source_subdirectory": "src",
+      "collect_artifacts": [
+        "report.json"
+      ],
+      "workspace_files": [
+        {
+          "source": "skills/vuln-scan/schema.json",
+          "destination": "schema.json",
+          "packaged_source": "support/scrutineer-vuln-scan/skills/vuln-scan/schema.json"
+        },
+        {
+          "destination": "context.json",
+          "content": "{\"repository\":{\"name\":\"linux\"},\"scrutineer\":{\"api_base\":\"\",\"token\":\"\",\"repository_id\":\"{CASE_ID}\",\"scan_subpath\":null},\"operator_target_files\":{TARGET_FILES_JSON}}\n"
+        }
+      ],
+      "index": 28,
+      "batch": 6,
+      "snapshot_sha256": "b21ae71b2133d37ba8adc9119909f1ef2b62513059f69f80dbe9d8c8146b0152",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse `src` as the supplied source root. Review these exact target files:\n\n{TARGET_FILES}\n\nThe target list is the complete scan scope. Read `context.json` and\n`schema.json`, follow the native static review and consolidation process, and\nwrite the schema-valid final result to `report.json`. The target slice is small:\nsubagents may return candidates in message text and must not create candidate\nfiles. All parent agents and subagents must use Haiku 4.5.\n\nDo not use the Scrutineer API, internet, Git history, CVE data, patches, fixed\nfiles, evaluator metadata, previous outputs, builds, execution, or external\nfiles. Do not install software or modify source files. Create only report.json.\n"
+    },
+    {
+      "key": "anthropic-vuln-scan",
+      "skill_name": "vuln-scan",
+      "repo": "https://github.com/anthropics/defending-code-reference-harness.git",
+      "cache": "defending-code",
+      "ref": "d3bea6b5793b5f3d59a75ebe69a58efa88383145",
+      "path": ".claude/skills/vuln-scan",
+      "invocation": "/vuln-scan . {FOCUS_ARGS}",
+      "prompt": "anthropic-vuln-scan.prompt.txt",
+      "tools": [
+        "Read",
+        "Glob",
+        "Grep",
+        "Write",
+        "Task",
+        "Bash"
+      ],
+      "collect_artifacts": [
+        "VULN-FINDINGS.json",
+        "VULN-FINDINGS.md"
+      ],
+      "index": 29,
+      "batch": 6,
+      "snapshot_sha256": "49e44d80ef199e695cae11801bb4f38d5efc15bcd7e5b5522116c977c77e2405",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the supplied repository root (`.`) as the target directory. The exact\ntarget files are:\n\n{TARGET_FILES}\n\nThe `--focus` arguments identify the complete review scope. Start from every\ntarget file and inspect other in-repository files only for necessary semantic\ncontext. Follow the native process and write only `VULN-FINDINGS.json` and\n`VULN-FINDINGS.md` at the repository root. Preserve the native candidate and\nconfidence schema. All parent agents and subagents must use Haiku 4.5.\n\nDo not use internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, builds, or source execution.\nDo not follow paths outside the repository or modify Linux source files.\n"
+    },
+    {
+      "key": "forge-bughunter",
+      "skill_name": "BugHunter",
+      "repo": "https://github.com/CarbeneAI/Forge.git",
+      "cache": "forge",
+      "ref": "add38e5812f08c79033c18d0bc88d4e4affbfa22",
+      "path": ".claude/skills/BugHunter",
+      "prompt": "forge-bughunter.prompt.txt",
+      "collect_artifacts": [
+        "findings.json",
+        "findings.md"
+      ],
+      "index": 30,
+      "batch": 7,
+      "snapshot_sha256": "77edfd1a97486d0bbc4b6b93e5e9a6b0d4130a4cd7ff062845b8ae5b806cc22a",
+      "native_prompt": "{SKILL_INVOCATION}\n\nPerform the skill's full static detection, verification, and reporting workflow\non these exact target files:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Inspect other files inside\nthe repository only when required to resolve semantic context. Because this is\na non-modifying static experiment, establish proof from source control flow and\ndata flow; do not generate or execute exploits, patch code, build Linux, or run\nLinux source. Write the native `findings.json` and `findings.md` deliverables at\nthe repository root, including an empty valid result when no finding survives\nthe skill's verification gate. All parent agents and subagents must use Haiku\n4.5.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, or paths outside the supplied\nrepository and selected skill. Do not modify Linux source files or create any\nfiles other than the two native deliverables.\n\nIf the skill verifies C-language semantics with a standalone synthetic snippet,\ncreate its source, compiler output, and executable only under `/tmp`. Every\ncompiler command must use an explicit `/tmp` output path (for example,\n`gcc -c /tmp/check.c -o /tmp/check.o`); do not leave object files or executables\nin the repository.\n"
+    },
+    {
+      "key": "yaklang-code-review",
+      "skill_name": "code-review",
+      "repo": "https://github.com/yaklang/yaklang.git",
+      "cache": "yaklang",
+      "ref": "1e376ff962666f42aff725e99190b5fbbbdc0486",
+      "path": "common/ai/aid/aireact/skills/code-review",
+      "prompt": "yaklang-code-review.prompt.txt",
+      "collect_artifacts": [
+        "SECURITY_AUDIT_REPORT.md"
+      ],
+      "index": 31,
+      "batch": 7,
+      "snapshot_sha256": "28cb2130104bb2d901cca57f68fda94e808cb82b1957145e5688cb4583f4ca57",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill to review these exact target files for security\nvulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Start from every listed\nfile and inspect other in-repository files only when necessary to resolve types,\nmacros, callers, callees, data flow, control flow, ownership, lifetime, locking,\nor subsystem invariants. Follow the skill's native staged review process and\nwrite its report to `SECURITY_AUDIT_REPORT.md` at the repository root. Write an\nexplicit no-finding report when no vulnerability survives review. All parent\nagents and subagents must use Haiku 4.5.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, builds, or source execution.\nDo not follow paths outside the repository, modify source files, or create files\nother than `SECURITY_AUDIT_REPORT.md`.\n"
+    },
+    {
+      "key": "posthog-contracts-security",
+      "skill_name": "review-hog-perspective-contracts-security",
+      "repo": "https://github.com/PostHog/posthog.git",
+      "cache": "posthog",
+      "ref": "c54fec2163ad9455fd23a947f86a9034c1df9388",
+      "path": "products/review_hog/skills/review-hog-perspective-contracts-security",
+      "prompt": "review.prompt.txt",
+      "index": 32,
+      "batch": 7,
+      "snapshot_sha256": "cb7c4100ff08125619439f44cdac0bd1a76a72f59b7b1fa2846db50867225fa4",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill to review these exact target files for security\nvulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Start from every listed\nfile and inspect other in-repository files only when necessary to resolve types,\nmacros, callers, callees, data flow, control flow, ownership, lifetime, locking,\nor subsystem invariants. Follow the skill's native analysis phases and report\nformat in the final response. When the skill is narrower than general\nvulnerability review, apply its native scope without substituting another\nworkflow. All parent agents and subagents must use Haiku 4.5.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, builds, or source execution.\nDo not follow paths outside the repository, modify source files, or create\nrepository output files.\n"
+    },
+    {
+      "key": "vulnerability-pattern-matcher",
+      "skill_name": "vulnerability-pattern-matcher",
+      "repo": "https://github.com/ArabelaTso/Skills-4-SE.git",
+      "cache": "skills-4-se",
+      "ref": "4f38503747e0617504bce5329283ef837d375c09",
+      "path": "skills/vulnerability-pattern-matcher",
+      "prompt": "review.prompt.txt",
+      "index": 33,
+      "batch": 7,
+      "snapshot_sha256": "cc7085437298bea66b916d627b3ca494db4eca1e4e18b486edb1a1bc56b273a6",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill to review these exact target files for security\nvulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Start from every listed\nfile and inspect other in-repository files only when necessary to resolve types,\nmacros, callers, callees, data flow, control flow, ownership, lifetime, locking,\nor subsystem invariants. Follow the skill's native analysis phases and report\nformat in the final response. When the skill is narrower than general\nvulnerability review, apply its native scope without substituting another\nworkflow. All parent agents and subagents must use Haiku 4.5.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, builds, or source execution.\nDo not follow paths outside the repository, modify source files, or create\nrepository output files.\n"
+    },
+    {
+      "key": "memory-api-misuse",
+      "skill_name": "memory-api-misuse",
+      "repo": "https://github.com/thejefflarson/soundcheck.git",
+      "cache": "soundcheck",
+      "ref": "4fc07c9516e2c64766dfdc47ae1508d9d7a5905d",
+      "path": ".claude/skills/memory-api-misuse",
+      "prompt": "review.prompt.txt",
+      "index": 34,
+      "batch": 7,
+      "snapshot_sha256": "f362729251c27348fc0a9df5b13e63e68217118266770a6a545e70394ce0b8fa",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill to review these exact target files for security\nvulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Start from every listed\nfile and inspect other in-repository files only when necessary to resolve types,\nmacros, callers, callees, data flow, control flow, ownership, lifetime, locking,\nor subsystem invariants. Follow the skill's native analysis phases and report\nformat in the final response. When the skill is narrower than general\nvulnerability review, apply its native scope without substituting another\nworkflow. All parent agents and subagents must use Haiku 4.5.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, builds, or source execution.\nDo not follow paths outside the repository, modify source files, or create\nrepository output files.\n"
+    },
+    {
+      "key": "sc-race-condition",
+      "skill_name": "sc-race-condition",
+      "repo": "https://github.com/ersinkoc/security-check.git",
+      "cache": "security-check",
+      "ref": "d19bcf68dfb8a5397773073d7b7245226b2b8894",
+      "path": "skills/sc-race-condition",
+      "prompt": "review.prompt.txt",
+      "index": 35,
+      "batch": 7,
+      "snapshot_sha256": "87cf2ecda65f3d797ccba7073e0a2f63d1ff43b0537fec346161716f4808334e",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill to review these exact target files for security\nvulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Start from every listed\nfile and inspect other in-repository files only when necessary to resolve types,\nmacros, callers, callees, data flow, control flow, ownership, lifetime, locking,\nor subsystem invariants. Follow the skill's native analysis phases and report\nformat in the final response. When the skill is narrower than general\nvulnerability review, apply its native scope without substituting another\nworkflow. All parent agents and subagents must use Haiku 4.5.\n\nDo not use the internet, external files, Git history, CVE databases, patches,\nfixed files, evaluator metadata, previous outputs, builds, or source execution.\nDo not follow paths outside the repository, modify source files, or create\nrepository output files.\n"
+    },
+    {
+      "key": "sendaifun-vulnhunter",
+      "skill_name": "vulnhunter",
+      "repo": "https://github.com/sendaifun/skills.git",
+      "cache": "sendaifun",
+      "ref": "06b36b8b420e705ffd57b29e463f01093959d8d4",
+      "path": "skills/vulnhunter",
+      "prompt": "vulnhunter.prompt.txt",
+      "collect_artifacts": [
+        "vulnhunter_security_review.md"
+      ],
+      "index": 36,
+      "batch": 7,
+      "snapshot_sha256": "6f9109d84e0f7af5d8472d73cdeb9e0eec02ea31de22466ec413d60241207b3d",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill to review these exact target files for security\nvulnerabilities:\n\n{TARGET_FILES}\n\nTreat the target list as the complete review scope. Inspect other in-repository\nfiles only for semantic context required by the skill. Follow the native sharp-\nedges detection, pattern analysis, variant assessment, verification, and report\nformat. Write the native report to `vulnhunter_security_review.md` at the\nrepository root, including an explicit no-finding report if no candidate\nsurvives verification. All parent agents and subagents must use Haiku 4.5.\n\nApplicable local Linux C analysis tools named by the skill are available.\nSemgrep must use the pinned local rules at\n`/scratch/user/vulhunter/skill-vuldet-batch2-data/tools/semgrep-rules/linux-c-security.yml`\nand only the listed target files. Do not use registry, `auto`, network-fetched\nrules, or install tools. CodeQL may inspect existing source, but do not create a\ndatabase because that would require building Linux. Put temporary scanner output\nunder `/tmp`, not in the repository. Skip language- or ecosystem-specific tools\nthat do not apply to Linux C.\n\nDo not use internet services, external files, Git history, CVE databases,\npatches, fixed files, evaluator metadata, previous outputs, builds, or source\nexecution. Do not follow paths outside the repository, modify source files, or\ncreate repository files other than `vulnhunter_security_review.md`.\n"
+    },
+    {
+      "key": "vulnerability-analysis",
+      "skill_name": "vulnerability-analysis",
+      "repo": "https://github.com/hypnguyen1209/offensive-claude.git",
+      "cache": "offensive-claude",
+      "ref": "0b8329e7c18dff6933e9c0fa07edfcb5b423edb2",
+      "path": "skills/vulnerability-analysis",
+      "prompt": "advanced-scanner-review.prompt.txt",
+      "allowed_output_paths": [
+        "workspace"
+      ],
+      "index": 37,
+      "batch": 7,
+      "snapshot_sha256": "606092f86af1cda6b74b0e40c84703b8eb289869d9298f3bd1168b251819be2d",
+      "native_prompt": "{SKILL_INVOCATION}\n\nUse the selected skill's static vulnerability-analysis workflow on these exact\ntarget files:\n\n{TARGET_FILES}\n\nThe supplied target list replaces the skill's reconnaissance input and is the\ncomplete review scope. Inspect other in-repository files only when required to\ntrace a relevant source-to-sink, lifetime, bounds, locking, caller, or helper\nrelationship. Follow the native engine-selection, semantic validation, and\nfinding-record process. Return the report in the final response. All parent\nagents and subagents must use Haiku 4.5.\n\nThe local Semgrep, CodeQL, Joern, Gitleaks, TruffleHog, and Trivy commands named\nby the skill are available. For Linux C, use only applicable static analysis.\nSemgrep must scan only the listed targets with the pinned rules at\n`/scratch/user/vulhunter/skill-vuldet-batch2-data/tools/semgrep-rules/linux-c-security.yml`.\nJoern may statically parse target code. Do not create a CodeQL database, build\nLinux, execute source, use dependency/advisory lookup, fetch scanner rules, or\ninstall tools. Put all temporary engine output under `/tmp`.\n\nDo not use the internet, OSINT, external files, Git history, CVE databases,\npatches, fixed files, evaluator metadata, previous outputs, or paths outside the\nrepository and selected skill. Do not modify repository files.\n"
+    }
+  ]
+}

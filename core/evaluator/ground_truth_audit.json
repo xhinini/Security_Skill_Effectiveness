@@ -1,0 +1,14 @@
+{
+  "train_test_cve_overlap": [],
+  "train_semantic_review_status": {
+    "provisional": 116
+  },
+  "test_cwe_label_sources": {
+    "frozen NVD collection": 68,
+    "NVD CWE-filtered query, checked 2026-09-24": 28,
+    "NVD secondary, checked 2026-09-24": 1,
+    "Red Hat Security Data API; frozen NVD label absent": 3
+  },
+  "train_fix_commit_metadata": "not located; semantic annotations retained with their original provisional status",
+  "patch_facts_are_not_semantic_root_cause_labels": true
+}

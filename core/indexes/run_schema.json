@@ -1,0 +1,12 @@
+{
+  "schema": "study-run/1",
+  "reference_format": "archive.zip::member/path",
+  "fields": {
+    "record_id": "Unique phase/model/variant/skill/case or refinement/skill/round/case identifier.",
+    "status": "Recorded execution status; pending cells have empty artifact references.",
+    "reproduction_interface": "Interface provided by run.py for reproducing detector runs.",
+    "reports": "Native final responses, stdout and collected report artifacts.",
+    "trajectories": "Native saved execution streams.",
+    "provenance": "Observed execution runtime, model, effort and metadata reference; null means unrecorded."
+  }
+}

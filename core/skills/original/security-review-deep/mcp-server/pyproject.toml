@@ -1,0 +1,12 @@
+[project]
+name = "mcp-security-advisories"
+version = "0.1.0"
+description = "MCP server for live CVE/vulnerability lookups (OSV, GHSA, NVD)"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.scripts]
+mcp-security-advisories = "mcp_security_server:mcp.run"

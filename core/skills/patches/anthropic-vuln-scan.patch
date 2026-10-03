@@ -1,0 +1,83 @@
+--- original/SKILL.md
++++ refined/SKILL.md
+@@ -97,6 +97,16 @@
+ with a low confidence score rather than dropping it. A downstream triage
+ step does the rigorous verification; your job is to not miss things.
+ 
++Before reporting a candidate, trace the complete path from its source or
++state through the actual dispatch branch and helpers to the operation that
++causes the claimed impact. Check relevant caller, framework, and transport
++contracts instead of assuming they provide a guarantee. Separate reachability
++from impact, cite the line of the unchecked use or state transition, and
++choose a category that matches the operation. A nearby flaw or similar issue
++in another branch is not evidence for this candidate. Include lifecycle,
++concurrency, and error-path issues when they have plausible security impact,
++even without direct attacker-controlled bytes flowing to a sink.
++
+ WHAT TO LOOK FOR:
+ 
+   MEMORY SAFETY (C/C++ and unsafe/FFI blocks) — HIGH VALUE:
+@@ -106,6 +116,41 @@
+   - format-string bugs
+   - unbounded recursion or allocation driven by untrusted size fields
+ 
++  BOUNDS & PARSING — HIGH VALUE:
++  - At each read or copy, validate the length against the exact pointer and
++    span used there. For subregions and nested records, validate the starting
++    offset, complete header, and declared length against the remaining buffer
++    before forming pointers, reading, or advancing.
++  - Recheck bounds after cursor or index advances, on continuation and error
++    paths, and in the exact dispatch branch and helper reached. An enclosing
++    length check or a guard in a similar parser may not cover later accesses.
++  - Trace length and count values to their trust source; compare them with
++    both the source allocation and destination capacity, including prefixes
++    and offsets. Check arithmetic before using its result, as well as returned
++    counts, special-case branches, and runtime configuration updates.
++  - Check index domains before bitmap or mask operations. Track which bytes
++    are initialized and valid before parsing or exporting them, and whether
++    pointers remain valid after operations that can relocate their storage.
++
++  LIFETIME, CONCURRENCY & STATE — HIGH VALUE:
++  - Trace ownership and references through success, failure, timeout, retry,
++    rollback, close, removal, and asynchronous completion. Confirm that work
++    has stopped and every alias or child object remains alive before use or
++    reclamation; a related owner reference or removal from an index alone may
++    not protect it.
++  - Follow locks through callers and callees. Check that the lock protecting
++    shared state spans the whole access, and inspect nested acquisition order,
++    callbacks, synchronous waits or cancellation, and process/interrupt
++    context for deadlocks or races.
++  - Trace fields and invariants from every initialization path through
++    publication, callbacks, state transitions, and cleanup. Check partial
++    setup and unwind paths, work skipped before state updates, and values
++    reused after locks are released or shared state is rebuilt.
++  - Check validation order before side effects. For errors, warnings, and
++    assertions, trace reachability and what happens next: clean rejection is
++    usually not a finding, but a reachable fatal failure or continued mutation
++    of invalid shared state can be security-relevant.
++
+   INJECTION & CODE EXECUTION — HIGH VALUE:
+   - SQL / command / LDAP / XPath / NoSQL / template injection
+   - path traversal in file operations
+@@ -120,7 +165,9 @@
+ 
+   LOW VALUE — note briefly, keep looking:
+   - null-pointer deref at small fixed offsets with no attacker control
+-  - assertion failures / clean error returns (correct handling, not a bug)
++  - cleanly handled error returns and assertions on unreachable internal
++    invariants; assess reachable assertions, warnings, and null dereferences
++    by their actual security impact rather than dismissing them by type
+ 
+ DO NOT REPORT (common false positives — skip even if technically present):
+   - volumetric DoS / rate-limiting / resource-exhaustion — BUT unbounded
+@@ -138,7 +185,9 @@
+ {if --extra <file> was given: append its contents here verbatim}
+ 
+ For each finding you DO report, trace: where does the untrusted input
+-enter, what path reaches the sink, and what condition triggers it.
++enter (or what state/lifecycle condition applies), what exact path reaches
++the operation, what guards and contracts apply, and what condition triggers
++the impact. Cite the operation that causes it, not only a nearby check.
+ 
+ OUTPUT — one block per finding, nothing else:
+ 

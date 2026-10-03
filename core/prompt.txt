@@ -1,0 +1,7 @@
+{NATIVE_TASK}
+
+The selected skill defines the finding format and no-finding response. Preserve
+its native fields and result files. Review only the supplied before-fix source
+tree. Do not consult evaluator data, historical results, Git history, fixed
+source, patches, CVE databases, or the internet. Do not execute Linux source or
+modify source files. Write only the selected skill's permitted report artifacts.

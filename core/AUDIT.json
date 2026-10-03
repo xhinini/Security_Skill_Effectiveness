@@ -1,0 +1,16 @@
+{
+  "canonical_train_cases": 100,
+  "canonical_test_cases": 100,
+  "selected_skills": 37,
+  "training_semantic_annotations": "provisional",
+  "training_fix_commits": "not available in located manifests",
+  "test_query_membership_cwe_labels": 28,
+  "training_closed_model_semantic_analysis": "not located",
+  "training_open_model_analysis_source": "original high-effort snapshot",
+  "test_expected_runs": 4000,
+  "test_complete_runs": 2044,
+  "test_runtime_counts": {
+    "codex-cli": 1000,
+    "claude-code": 1044
+  }
+}

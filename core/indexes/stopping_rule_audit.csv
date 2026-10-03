@@ -1,0 +1,6 @@
+skill,last_executed_round,selected_round,strict_two_stale_round_stop,executed_after_strict_stop
+plugin-security-audit,6,6,4,"[5, 6]"
+sickn33-differential-review,10,8,10,[]
+abstract-state-analyzer,4,2,4,[]
+mcouthon-security-review,3,1,3,[]
+anthropic-vuln-scan,6,1,3,"[4, 5, 6]"

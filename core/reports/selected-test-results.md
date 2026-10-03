@@ -1,0 +1,22 @@
+| Skill | Comparison slot | Baseline C/F/S/All | Refined C/F/S/All | All change (pp) |
+|---|---|---:|---:|---:|
+| abstract-state-analyzer | big-closed | 10/12/12/4 | 19/31/33/11 | +7 |
+| abstract-state-analyzer | big-open | 13/17/15/10 | 16/14/12/10 | +0 |
+| abstract-state-analyzer | small-closed | 4/7/7/3 | 4/8/7/2 | -1 |
+| abstract-state-analyzer | small-open | 7/10/7/5 | 11/16/15/6 | +1 |
+| anthropic-vuln-scan | big-closed | 9/15/13/6 | 23/28/29/14 | +8 |
+| anthropic-vuln-scan | big-open | 15/16/13/7 | 20/23/23/13 | +6 |
+| anthropic-vuln-scan | small-closed | 5/11/11/3 | 6/9/9/1 | -2 |
+| anthropic-vuln-scan | small-open | 6/14/10/3 | 13/10/13/7 | +4 |
+| mcouthon-security-review | big-closed | 6/7/9/3 | 25/25/38/9 | +6 |
+| mcouthon-security-review | big-open | 14/17/14/11 | 16/18/20/9 | -2 |
+| mcouthon-security-review | small-closed | 4/6/4/2 | 6/6/12/1 | -1 |
+| mcouthon-security-review | small-open | 5/8/7/3 | 16/18/20/9 | +6 |
+| plugin-security-audit | big-closed | 10/20/22/9 | 18/30/31/14 | +5 |
+| plugin-security-audit | big-mixed | 4/5/6/2 | 21/34/31/15 | +13 |
+| plugin-security-audit | small-closed | 7/7/7/5 | 5/12/13/3 | -2 |
+| plugin-security-audit | small-open | 9/10/10/4 | 12/20/18/5 | +1 |
+| sickn33-differential-review | big-closed | 14/17/17/14 | 27/36/39/23 | +9 |
+| sickn33-differential-review | big-mixed | 6/7/7/5 | 19/26/22/11 | +6 |
+| sickn33-differential-review | small-closed | 2/8/6/2 | 9/9/9/7 | +5 |
+| sickn33-differential-review | small-open | 7/11/7/4 | 14/21/17/9 | +5 |

@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-03",
+  "basis": "User-reported harness model-label error; corrected per explicit instruction.",
+  "test_models": {
+    "big-closed": "claude-sonnet-5",
+    "small-closed": "claude-haiku-4-5"
+  },
+  "refinement_model": "gpt-5.6-luna",
+  "preserved": "Scores, findings, case identities and recorded execution runtimes.",
+  "privacy": "Personal usernames and identifying user paths/emails are anonymized in exported files and archives.",
+  "inventory": "sha256 and bytes describe corrected archive contents; source_sha256 retains the original source digest."
+}

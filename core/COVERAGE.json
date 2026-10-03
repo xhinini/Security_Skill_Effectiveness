@@ -1,0 +1,243 @@
+{
+  "built_utc": "2026-09-29T20:34:43.578977+00:00",
+  "training": {
+    "training-big-closed": {
+      "status": {
+        "completed": 3700
+      },
+      "trajectories": 3700,
+      "observed_effort": {
+        "high": 3700
+      }
+    },
+    "training-big-open": {
+      "status": {
+        "completed": 3700
+      },
+      "trajectories": 3700,
+      "observed_effort": {
+        "high": 3700
+      }
+    },
+    "training-small-closed": {
+      "status": {
+        "completed": 3700
+      },
+      "trajectories": 3700,
+      "observed_effort": {
+        "low": 3700
+      }
+    },
+    "training-small-open": {
+      "status": {
+        "completed": 3596,
+        "failed": 104
+      },
+      "trajectories": 3700,
+      "observed_effort": {
+        "high": 3654,
+        "low": 46
+      }
+    }
+  },
+  "testing": {
+    "big-closed/original": {
+      "completed": 500
+    },
+    "small-closed/original": {
+      "completed": 500
+    },
+    "big-closed/refined": {
+      "completed": 500
+    },
+    "small-closed/refined": {
+      "completed": 500
+    },
+    "small-open/original": {
+      "completed": 13,
+      "pending": 487
+    },
+    "small-open/refined": {
+      "pending": 500
+    },
+    "big-open/original": {
+      "completed": 31,
+      "pending": 469
+    },
+    "big-open/refined": {
+      "pending": 500
+    }
+  },
+  "refinement_rounds": [
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_00",
+      "selected": false
+    },
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_01",
+      "selected": false
+    },
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_02",
+      "selected": false
+    },
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_03",
+      "selected": false
+    },
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_04",
+      "selected": false
+    },
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_05",
+      "selected": false
+    },
+    {
+      "skill": "plugin-security-audit",
+      "round": "round_06",
+      "selected": true
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_00",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_01",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_02",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_03",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_04",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_05",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_06",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_07",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_08",
+      "selected": true
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_09",
+      "selected": false
+    },
+    {
+      "skill": "sickn33-differential-review",
+      "round": "round_10",
+      "selected": false
+    },
+    {
+      "skill": "abstract-state-analyzer",
+      "round": "round_00",
+      "selected": false
+    },
+    {
+      "skill": "abstract-state-analyzer",
+      "round": "round_01",
+      "selected": false
+    },
+    {
+      "skill": "abstract-state-analyzer",
+      "round": "round_02",
+      "selected": true
+    },
+    {
+      "skill": "abstract-state-analyzer",
+      "round": "round_03",
+      "selected": false
+    },
+    {
+      "skill": "abstract-state-analyzer",
+      "round": "round_04",
+      "selected": false
+    },
+    {
+      "skill": "mcouthon-security-review",
+      "round": "round_01",
+      "selected": true
+    },
+    {
+      "skill": "mcouthon-security-review",
+      "round": "round_02",
+      "selected": false
+    },
+    {
+      "skill": "mcouthon-security-review",
+      "round": "round_03",
+      "selected": false
+    },
+    {
+      "skill": "mcouthon-security-review",
+      "round": "round_00",
+      "selected": false
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_01",
+      "selected": true
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_02",
+      "selected": false
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_03",
+      "selected": false
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_04",
+      "selected": false
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_05",
+      "selected": false
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_06",
+      "selected": false
+    },
+    {
+      "skill": "anthropic-vuln-scan",
+      "round": "round_00",
+      "selected": false
+    }
+  ]
+}

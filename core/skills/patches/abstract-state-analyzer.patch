@@ -1,0 +1,84 @@
+--- original/SKILL.md
++++ refined/SKILL.md
+@@ -20,6 +20,9 @@
+ - Array/buffer operations
+ - Pointer/reference operations
+ - Function calls and parameter passing
++- Relevant callers, callees, callbacks, and asynchronous work that affect these operations
++- Shared state, lock boundaries, and resource acquisition or release when they affect safety
++- Where externally supplied lengths, counts, indices, and configuration values originate and where they are consumed
+ 
+ ### Step 2: Select Abstract Domains
+ 
+@@ -49,11 +52,13 @@
+ - Global variables
+ - Constants and literals
+ 
++Record which preconditions are established by code and which are assumptions. Treat unknown values, pointer nullability, object lifetime, and synchronization state as unknown unless the code or a stated contract proves otherwise. Add ownership or lock state to the abstract state when it is relevant to the property being checked.
++
+ Example:
+ ```python
+ def process(arr, index):
+     # Initial state:
+-    # arr: not-null (assumed)
++    # arr: not-null only if guaranteed by a stated precondition; otherwise maybe-null
+     # index: ⊤ (unknown integer)
+ ```
+ 
+@@ -98,6 +103,17 @@
+ # After join: x ∈ [5, 10]
+ ```
+ 
++Include early returns, errors, retries, and cleanup branches in the path analysis. Inspect relevant helper and caller behavior when it can change a value's range, transfer ownership, invalidate a pointer, release a lock, sleep, or affect whether an operation succeeded. A check on one path or at one call site does not establish an invariant on other paths.
++
++**Ownership and Concurrency**: Track state across calls and lifecycle boundaries
++- Pair each allocation, reference, registration, lock, and initialized resource with its transfer or release on every success, failure, retry, and teardown path.
++- Check cleanup order: callbacks and workers must be quiesced before releasing state they can access; a reference drop may run destruction, and a container reference does not necessarily keep each contained object alive.
++- For asynchronous operations, trace whether work can still use a submitted buffer or object after a timeout or error return, and follow completion and caller cleanup before treating that return as proof the resource can be released.
++- Trace borrowed pointers across helper calls that can resize, linearize, replace, or otherwise relocate backing storage. Reacquire them after such calls when needed.
++- For shared state, trace each reader, writer, callback, and teardown path across lock boundaries. Verify the required lock protects the full access, check acquisition order and re-entry, and revalidate state after an unlock/relock gap.
++- Check publication and initialization order against concurrent callbacks or teardown. A reference protects allocation lifetime but does not by itself make multi-step publication atomic.
++- Check a callee's execution-context and locking requirements at each relevant call site, including calls that may sleep, wait, cancel work, or invoke callbacks.
++
+ ### Step 5: Detect Potential Errors
+ 
+ Check for violations at each operation:
+@@ -138,16 +154,27 @@
+ # Check: arg type matches parameter type?
+ ```
+ 
++Also check these properties when relevant to the code and analysis goal:
++
++- **Exact bounds and lengths**: At every read and write, compare the index or offset plus access length with the actual source or destination capacity. Trace untrusted, returned, nested, and mutable lengths to the access they control; a source-length check does not prove destination space, and an earlier snapshot may be stale after shared state changes.
++- **Pointer use**: Verify that a null or validity check dominates every dereference on every reachable branch, including error handling, logging, and cleanup before a return. Check pointer lifetime and ownership separately from nullability.
++- **Initialization and outputs**: Follow each initialization path and helper output through its first use. Verify every relevant branch initializes the full value or callback table that later consumers expect, including configured dispatch paths; check readiness before exposing cached or reused data, and ensure failure is propagated rather than leaving unusable state behind.
++- **Resource lifecycle**: Confirm each acquired resource is released or transferred exactly once on every terminal path, in an order that preserves dependencies. Include partial initialization, retries, resize failures, callbacks, and normal removal.
++- **Concurrency and progress**: Check races, lock ordering, re-entrant acquisition, waits under locks, stale checks across lock gaps, and whether retry or skip paths can loop or stall. Inspect shared-state synchronization even when the initial review focus is bounds or data flow.
++- **Failure behavior**: Follow error values, sentinels, and encoded error pointers through shared cleanup and callers. Check reachable assertion, panic, or fatal-diagnostic paths when inputs or ordinary failures can violate their assumptions.
++
+ ### Step 6: Report Findings
+ 
+ For each potential error, report:
+ 
+ 1. **Location**: File, line number, function
+-2. **Error Type**: Out-of-bounds, null dereference, etc.
++2. **Error Type and CWE**: Identify the mechanism, such as an out-of-bounds read/write or null dereference. For memory-safety or security findings, include the specific CWE identifier and name when supported by the evidence; distinguish nearby categories rather than using only a generic bounds label.
+ 3. **Abstract State**: Variable values at the error point
+ 4. **Severity**: Definite error vs. potential error
+ 5. **Explanation**: Why the error might occur
+ 6. **Suggestion**: How to fix (add check, change bounds, etc.)
++
++Before reporting, confirm that the path is reachable under the stated assumptions and that the evidence supports the claimed cause. Anchor the location to the exact statement or construct that creates the unsafe condition or that a repair would change; verify it against the source listing. A later dereference may show the consequence, while the root cause may be an earlier missing check, state publication, synchronization, or cleanup step. Do not substitute a nearby plausible issue for the path being explained. For lifetime and concurrency findings, identify the exact operation or ordering that creates the unsafe transition (for example, losing ownership, invalidating a borrowed pointer, or crossing an unprotected synchronization gap). Cite that root-cause construct; use later accesses to explain impact, not as a substitute for the repair location. State uncertainty as potential rather than definite when the available contracts or paths do not prove certainty.
+ 
+ ## Complete Example
+ 
+@@ -259,7 +286,8 @@
+ For called functions, use summaries instead of full analysis:
+ ```python
+ def helper(x):
+-    # Summary: returns x + 1, no errors
++    # Verified summary under the applicable type and overflow assumptions:
++    # returns x + 1, no errors
+     return x + 1
+ 
+ # Use summary instead of analyzing helper body

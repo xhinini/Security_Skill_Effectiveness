@@ -1,0 +1,61 @@
+# Security-focused pre-commit configuration
+# Install: pip install pre-commit && pre-commit install
+# Run manually: pre-commit run --all-files
+
+repos:
+  # --- Secret scanning ---
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
+        name: gitleaks (secret scan)
+
+  # --- SAST: pattern-based vulnerability detection ---
+  - repo: https://github.com/semgrep/semgrep
+    rev: v1.95.0
+    hooks:
+      - id: semgrep
+        name: semgrep (SAST)
+        args:
+          - --config=p/default
+          - --config=p/security-audit
+          - --config=p/owasp-top-ten
+          - --config=p/cwe-top-25
+          - --error
+          - --skip-unknown-extensions
+          - --quiet
+
+  # --- Dependency / CVE scanning via OSV (Google's aggregated advisory DB) ---
+  - repo: local
+    hooks:
+      - id: osv-scanner
+        name: osv-scanner (deps + CVEs)
+        entry: osv-scanner scan source -r .
+        language: system
+        pass_filenames: false
+        # Install separately: go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest
+        # Or use the Docker image: ghcr.io/google/osv-scanner
+
+  # --- Filesystem / IaC / container vulns ---
+  - repo: local
+    hooks:
+      - id: trivy-fs
+        name: trivy (filesystem scan)
+        entry: trivy fs --severity HIGH,CRITICAL --exit-code 1 --skip-dirs node_modules,.venv .
+        language: system
+        pass_filenames: false
+        # Install: https://aquasecurity.github.io/trivy/
+
+  # --- Python-specific: bandit for common Python security issues ---
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.10
+    hooks:
+      - id: bandit
+        name: bandit (python SAST)
+        args: ["-ll", "-ii"]  # report medium+ severity, medium+ confidence
+        files: \.py$
+
+# Run only on changed files for speed; the security skill re-runs broader
+# scans server-side / in CI.
+default_stages: [pre-commit]
+fail_fast: false
